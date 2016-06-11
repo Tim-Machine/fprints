@@ -1,0 +1,43 @@
+<h2>Show blueprint</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @blueprint.title %>
+  </li>
+
+  <li>
+    <strong>Image:</strong>
+    <%= @blueprint.image %>
+  </li>
+
+  <li>
+    <strong>Blueprint string:</strong>
+    <%= @blueprint.blueprint_string %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @blueprint.description %>
+  </li>
+
+  <li>
+    <strong>Requirements:</strong>
+    <%= @blueprint.requirements %>
+  </li>
+
+  <li>
+    <strong>Json:</strong>
+    <%= @blueprint.json %>
+  </li>
+
+  <li>
+    <strong>Factorio version:</strong>
+    <%= @blueprint.factorio_version_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: blueprint_path(@conn, :edit, @blueprint) %>
+<%= link "Back", to: blueprint_path(@conn, :index) %>
