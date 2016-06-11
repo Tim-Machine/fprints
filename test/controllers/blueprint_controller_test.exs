@@ -2,7 +2,7 @@ defmodule Fprints.BlueprintControllerTest do
   use Fprints.ConnCase
 
   alias Fprints.Blueprint
-  @valid_attrs %{blueprint_string: "some content", description: "some content", image: "some content", json: "some content", requirements: "some content", title: "some content"}
+  @valid_attrs %{description: "some content", image: "some content", parsed: "some content", raw: "some content", requirements: "some content", title: "some content"}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do

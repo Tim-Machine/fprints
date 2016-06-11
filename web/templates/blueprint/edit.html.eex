@@ -1,0 +1,6 @@
+<h2>Edit blueprint</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: blueprint_path(@conn, :update, @blueprint) %>
+
+<%= link "Back", to: blueprint_path(@conn, :index) %>

@@ -27,6 +27,7 @@ defmodule Fprints.Router do
     get "/", PageController, :index
     resources "/users", UserController, only: [:new, :create]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+     resources "/blueprints", BlueprintController
   end
 
   scope "/", Fprints do
@@ -34,6 +35,7 @@ defmodule Fprints.Router do
     resources "/users", UserController, only: [:show, :index, :update, :delete]
     resources "/factorio_versions", FactorioVersionController
      resources "/blueprint_tags", BlueprintTagController
+      resources "/blueprints", BlueprintController
   end
 
 

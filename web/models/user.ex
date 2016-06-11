@@ -7,6 +7,7 @@ defmodule Fprints.User do
     field :password_hash, :string
     field :user_name, :string
     field :avatar, :string
+    has_many :blueprints, Fprints.Blueprint
 
     timestamps
   end
