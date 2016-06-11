@@ -1,0 +1,26 @@
+<h2>Listing factorio versions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Version number</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for factorio_version <- @factorio_versions do %>
+    <tr>
+      <td><%= factorio_version.version_number %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: factorio_version_path(@conn, :show, factorio_version), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: factorio_version_path(@conn, :edit, factorio_version), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: factorio_version_path(@conn, :delete, factorio_version), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New factorio version", to: factorio_version_path(@conn, :new) %>

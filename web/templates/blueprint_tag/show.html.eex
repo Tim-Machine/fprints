@@ -1,0 +1,13 @@
+<h2>Show blueprint tag</h2>
+
+<ul>
+
+  <li>
+    <strong>Tag:</strong>
+    <%= @blueprint_tag.tag %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: blueprint_tag_path(@conn, :edit, @blueprint_tag) %>
+<%= link "Back", to: blueprint_tag_path(@conn, :index) %>

@@ -1,0 +1,6 @@
+<h2>Edit factorio version</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: factorio_version_path(@conn, :update, @factorio_version) %>
+
+<%= link "Back", to: factorio_version_path(@conn, :index) %>

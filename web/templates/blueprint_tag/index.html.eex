@@ -1,0 +1,26 @@
+<h2>Listing blueprint tags</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tag</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for blueprint_tag <- @blueprint_tags do %>
+    <tr>
+      <td><%= blueprint_tag.tag %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: blueprint_tag_path(@conn, :show, blueprint_tag), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: blueprint_tag_path(@conn, :edit, blueprint_tag), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: blueprint_tag_path(@conn, :delete, blueprint_tag), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New blueprint tag", to: blueprint_tag_path(@conn, :new) %>

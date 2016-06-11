@@ -32,6 +32,8 @@ defmodule Fprints.Router do
   scope "/", Fprints do
     pipe_through [:browser, :browser_auth]
     resources "/users", UserController, only: [:show, :index, :update, :delete]
+    resources "/factorio_versions", FactorioVersionController
+     resources "/blueprint_tags", BlueprintTagController
   end
 
 

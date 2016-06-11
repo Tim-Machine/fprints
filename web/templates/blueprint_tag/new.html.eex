@@ -1,0 +1,6 @@
+<h2>New blueprint tag</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: blueprint_tag_path(@conn, :create) %>
+
+<%= link "Back", to: blueprint_tag_path(@conn, :index) %>

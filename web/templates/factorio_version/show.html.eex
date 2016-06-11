@@ -1,0 +1,13 @@
+<h2>Show factorio version</h2>
+
+<ul>
+
+  <li>
+    <strong>Version number:</strong>
+    <%= @factorio_version.version_number %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: factorio_version_path(@conn, :edit, @factorio_version) %>
+<%= link "Back", to: factorio_version_path(@conn, :index) %>
